@@ -1,0 +1,4 @@
+name: Facing
+version: ${project.version}
+main: com.benjocraeft.facing.Facing
+api-version: 1.18
