@@ -21,14 +21,11 @@ public final class Facing extends JavaPlugin implements Listener {
     @EventHandler
     public void onBlockPlaced(BlockPlaceEvent event){
         Block block = event.getBlockPlaced();
-        getLogger().info(block.getType().name());
         if (block.getType() == Material.DEEPSLATE){
             Orientable orientation = (Orientable)block.getBlockData();
             orientation.setAxis(Axis.Y);
             block.setBlockData(orientation);
-            getLogger().info(block.getLocation().getDirection().toString());
         }
-
     }
 
     @Override
